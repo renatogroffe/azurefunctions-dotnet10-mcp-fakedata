@@ -14,14 +14,27 @@ Monitoramento desta aplicação via **Dashboards with Grafana**:
 
 ## Testes com aplicação executada via Visual Studio 2026
 
+Aplicação executando localmente, com Functions expostas como Tools do MCP Server:
+
+![Executando o MCP Server/Function App localmente](img/vscode-local-01.png)
 
 Arquivo mcp.json para testes via VS Code:
 
 ```json
-
+{
+	"servers": {
+		"mcp-fake-data": {
+			"url": "http://localhost:7176/runtime/webhooks/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
 ```
 
 Resultado dos testes no VS Code:
+
+![Consumindo o MCP Server executado localmente](img/vscode-local-01.png):
 
 
 ## Testes com aplicação publicada como Function App
