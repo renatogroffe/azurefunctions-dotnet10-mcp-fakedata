@@ -11,3 +11,53 @@ Monitoramento desta aplicação via **Live Metrics no Application Insights**:
 Monitoramento desta aplicação via **Dashboards with Grafana**:
 
 ![Telemetria visualizada a partir de dashboard Grafana](img/grafana-01.png)
+
+## Testes com aplicação executada via Visual Studio 2026
+
+
+Arquivo mcp.json para testes via VS Code:
+
+```json
+
+```
+
+Resultado dos testes no VS Code:
+
+
+## Testes com aplicação publicada como Function App
+
+Cada Tool do MCP Server corresponderá a uma função exposta através da Function App:
+
+![Functions/Tools já publicadas](img/functions-azure-01.png)
+
+Arquivo mcp.json para testes via VS Code:
+
+```json
+{
+	"servers": {
+		"mcp-fake-data": {
+			"type": "http",
+			"url": "https://functionapp.region.azurewebsites.net/runtime/webhooks/mcp",
+			"headers": {
+				"x-functions-key": "${input:functions-key}"
+			}
+		}
+	},
+	"inputs": [
+		{
+			"type": "promptString",
+			"id": "functions-key",
+			"description": "Functions App Key",
+			"password": true
+		}
+	]
+}
+```
+
+O parâmetro **functions-key** corresponde à key **mcp_extension** (um dos benefícios em se desenvolver um MCP Server como uma Function, com uma implementação básica de segurança sem praticamente nenhum esforço de código):
+
+![Key para o MCP Server](img/function-key-01.png)
+
+Resultado dos testes no VS Code:
+
+![Consumindo o MCP Server/Function App](img/vscode-functionapp-01.png)
