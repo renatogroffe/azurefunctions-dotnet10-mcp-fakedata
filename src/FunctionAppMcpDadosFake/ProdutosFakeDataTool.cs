@@ -44,10 +44,10 @@ public class ProdutosFakeDataTool
         }
         catch (Exception ex)
         {
-            return new BadRequestObjectResult(new Result<Contato>
+            return new BadRequestObjectResult(new Result<Produto>
             {
                 IsSuccess = false,
-                Message = $"Erro ao gerar dados fake de contatos: {ex.Message}"
+                Message = $"Erro ao gerar dados fake de produtos: {ex.Message}"
             });
         }
     }
