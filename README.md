@@ -16,7 +16,7 @@ Monitoramento desta aplicação via **Dashboards with Grafana**:
 
 Aplicação executando localmente, com Functions expostas como Tools do MCP Server:
 
-![Executando o MCP Server/Function App localmente](img/vscode-local-01.png)
+![Executando o MCP Server/Function App localmente](img/functionapp-local-01.png)
 
 Arquivo mcp.json para testes via VS Code:
 
