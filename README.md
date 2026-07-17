@@ -5,6 +5,7 @@ Live em que este exemplo foi apresentado (**canal AzureBrasil.cloud**): **https:
 
 Monitoramento desta aplicação via **Live Metrics no Application Insights**:
 
+![Telemetria visualizada a partir do Application Insights](img/appinsights-01.png)
 
 
 Monitoramento desta aplicação via **Dashboards with Grafana**:
